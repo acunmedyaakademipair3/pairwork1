@@ -1,11 +1,11 @@
 public class Instructor extends User {
     private String role;
-    private String Speciality;
+    private String speciality;
 
     public Instructor(String role, String speciality, int id, String username, String name, String surname, String email) {
         super(surname, email, name, id, username);
         this.role = role;
-        Speciality = speciality;
+        this.speciality = speciality;
     }
 
     public String getRole() {
@@ -17,10 +17,23 @@ public class Instructor extends User {
     }
 
     public String getSpeciality() {
-        return Speciality;
+        return speciality;
     }
 
     public void setSpeciality(String speciality) {
-        Speciality = speciality;
+        this.speciality = speciality;
+    }
+
+    @Override
+    public String toString() {
+        return "Instructor{" +
+                "role='" + role + '\'' +
+                ", speciality='" + speciality + '\'' +
+                ", id=" + getId() +
+                ", username='" + getUsername() + '\'' +
+                ", name='" + getName() + '\'' +
+                ", surname='" + getSurname() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                '}';
     }
 }
